@@ -85,22 +85,7 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
         />
       </>
     ) : (
-      <>
-        <Text
-          type="description"
-          color={COLORS.DARK_GREY}
-          fontFamily="OpenSansBold"
-        >
-          Выберите начинку
-        </Text>
-        <Select
-          params={["Cтандартная"]}
-          disabled
-          value={formik.values.filling}
-          onChange={formik.handleChange}
-          name="filling"
-        />
-      </>
+      <></>
     );
   };
 
