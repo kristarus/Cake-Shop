@@ -65,7 +65,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
 
   const updateLocalStorageMinPrice = (min?: string) => {
     const filter = getLocalStorageFilter();
-    if (min) filter.price.min = min;
+    if (min) filter.price[page].min = min;
     else filter.price[page].min = formik.values.min;
     setLocalStorageFilter(filter);
   };
@@ -73,7 +73,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
   const updateLocalStorageMaxPrice = (max?: string) => {
     const filter = getLocalStorageFilter();
     if (max) filter.price[page].max = max;
-    else filter.price.max = formik.values.max;
+    else filter.price[page].max = formik.values.max;
     setLocalStorageFilter(filter);
   };
 
