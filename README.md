@@ -1,7 +1,7 @@
 # Cake shop project
 ## Description
 
-This project is an online confectionery shop. The application has a clear design, easy navigation and block placement. The online store is written in Typescript. The third-party library Styled Components was used for styling, as well as Material UI. The Formik and Yup libraries were used to process the form data. Sending data to the local server is done using the Axios library and Redux Thunk. Library React-router-dom was used for creating navigation links.
+This project is an <b>online confectionery shop</b>. The application has a clear design, easy navigation and block placement. The online store is written in Typescript. The third-party library Styled Components was used for styling, as well as Material UI. The Formik and Yup libraries were used to process the form data. Sending data to the local server is done using the Axios library and Redux Thunk. Library React-router-dom was used for creating navigation links.
 
 ## Implemented functionality
 
