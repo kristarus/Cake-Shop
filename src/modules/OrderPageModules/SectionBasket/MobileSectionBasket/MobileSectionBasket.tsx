@@ -68,9 +68,9 @@ function MobileSectionBasket() {
     if (!basket.length) return;
     return (
       <Button
-        backgroundColor={COLORS.WHITE}
-        textColor={COLORS.DARK_GREY}
-        borderColor={COLORS.DARK_GREY}
+        backgroundcolor={COLORS.WHITE}
+        textcolor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         text="Оформить заказ"
         onClick={changeModal}
       />

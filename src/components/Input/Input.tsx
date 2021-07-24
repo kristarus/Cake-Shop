@@ -8,7 +8,7 @@ function Input({
   onChange,
   onBlur,
   placeholder = "",
-  borderColor,
+  bordercolor,
   width,
   multiline = false,
   rows,
@@ -23,7 +23,7 @@ function Input({
       helperText={error}
       variant="outlined"
       placeholder={placeholder}
-      borderColor={borderColor}
+      bordercolor={bordercolor}
       width={width}
       multiline={multiline}
       rows={rows}

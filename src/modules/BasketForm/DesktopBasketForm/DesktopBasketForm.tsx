@@ -144,7 +144,7 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
           name="name"
           placeholder="Ваше имя"
           width="47%"
-          borderColor={COLORS.DARK_GREY}
+          bordercolor={COLORS.DARK_GREY}
           value={formik.values.name}
           onChange={formik.handleChange}
           error={formik.errors.name}
@@ -153,7 +153,7 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
           name="phone"
           placeholder="Номер телефона"
           width="47%"
-          borderColor={COLORS.DARK_GREY}
+          bordercolor={COLORS.DARK_GREY}
           value={formik.values.phone}
           onChange={formik.handleChange}
           error={formik.errors.phone}
@@ -164,7 +164,7 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
         type="date"
         placeholder="Дата доставки"
         width="100%"
-        borderColor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         value={formik.values.date}
         onChange={formik.handleChange}
       />
@@ -193,7 +193,7 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
         name="comment"
         placeholder="Комментарий к заказу"
         width="100%"
-        borderColor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         value={formik.values.comment}
         onChange={formik.handleChange}
       />
@@ -204,7 +204,12 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
         <Text type="p" color={COLORS.DARK_GREY} fontFamily="OpenSansLight">
           Стоимость товаров
         </Text>
-        <Text type="h4" color={COLORS.DARK_GREY} fontFamily="OpenSansBold">
+        <Text
+          type="h4"
+          color={COLORS.DARK_GREY}
+          fontFamily="OpenSansBold"
+          align="end"
+        >
           {Price + " BYN"}
         </Text>
       </PriceWrapper>
@@ -212,7 +217,12 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
         <Text type="p" color={COLORS.DARK_GREY} fontFamily="OpenSansLight">
           Стоимость Доставки
         </Text>
-        <Text type="h4" color={COLORS.DARK_GREY} fontFamily="OpenSansBold">
+        <Text
+          type="h4"
+          color={COLORS.DARK_GREY}
+          fontFamily="OpenSansBold"
+          align="end"
+        >
           {deliveryPrice + " BYN"}
         </Text>
       </PriceWrapper>
@@ -228,9 +238,9 @@ function DesktopBasketForm({ eventState, confirmEvent }: IBasketFormProps) {
       </ContentWrapper>
       <ContentWrapper align="center" margin="0">
         <Button
-          backgroundColor={COLORS.DARK_GREY}
-          textColor={COLORS.WHITE}
-          borderColor={COLORS.DARK_GREY}
+          backgroundcolor={COLORS.DARK_GREY}
+          textcolor={COLORS.WHITE}
+          bordercolor={COLORS.DARK_GREY}
           text="Подтвердить заказ"
           onClick={() => {}}
           type="submit"

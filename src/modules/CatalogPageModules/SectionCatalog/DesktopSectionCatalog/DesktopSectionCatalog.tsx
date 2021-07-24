@@ -95,7 +95,6 @@ function DesktopSectionCatalog({ header, page }: IDesktopSectionCatalogProps) {
   };
 
   const addCatalogItems = (isEvent: boolean) => {
-    console.log("isEvent", isEvent);
     return catalogData.map((item, index) =>
       checkItemsByFilter(index) === true ? (
         <CatalogItem params={item} key={index + Math.random()} />
@@ -129,9 +128,9 @@ function DesktopSectionCatalog({ header, page }: IDesktopSectionCatalogProps) {
               device="desktop"
             />
             <Button
-              backgroundColor={COLORS.WHITE}
-              textColor={COLORS.DARK_GREY}
-              borderColor={COLORS.DARK_GREY}
+              backgroundcolor={COLORS.WHITE}
+              textcolor={COLORS.DARK_GREY}
+              bordercolor={COLORS.DARK_GREY}
               text="Применить"
               onClick={() => {
                 setIsEvent(!isEvent);

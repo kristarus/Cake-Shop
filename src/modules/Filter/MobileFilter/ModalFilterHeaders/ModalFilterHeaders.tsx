@@ -32,8 +32,12 @@ function ModalFilterHeaders({
   );
 
   const addItems = (data: { name: string; options: string[] }[]) => {
-    return data.map((item: { name: string; options: string[] }) => (
-      <StyledItemBtn onClick={changeModalOptions} id={item.name}>
+    return data.map((item: { name: string; options: string[] }, index) => (
+      <StyledItemBtn
+        onClick={changeModalOptions}
+        id={item.name}
+        key={item.name + index + Math.random}
+      >
         <div id={item.name}>{item.name}</div>
         <div id={item.name}>{">"}</div>
       </StyledItemBtn>
@@ -80,9 +84,9 @@ function ModalFilterHeaders({
             {chooseType()}
             <ButtonWrapper>
               <Button
-                backgroundColor={COLORS.DARK_GREY}
-                textColor={COLORS.WHITE}
-                borderColor={COLORS.DARK_GREY}
+                backgroundcolor={COLORS.DARK_GREY}
+                textcolor={COLORS.WHITE}
+                bordercolor={COLORS.DARK_GREY}
                 text="Применить"
                 onClick={onClick}
               />

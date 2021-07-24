@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import { formikConfig } from "../data";
 import { COLORS } from "constants/colors";
@@ -13,6 +13,8 @@ import {
   StyledCloseButton,
   CountPriceWrapper,
   StyledChangeButton,
+  SelectWrapper,
+  TextWrapper,
 } from "./DesktopBasketItemStyles";
 import { IDesktopBasketItemProps, IItemBasketProps, IItemProps } from "./types";
 
@@ -67,7 +69,6 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
   });
 
   const addSelect = () => {
-    if (params.isDegustationBox) return <></>;
     return params.isPie ? (
       <>
         <Text
@@ -98,7 +99,6 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
         deletedIndex = index;
       }
     });
-    console.log(deletedIndex);
     basket.splice(deletedIndex, 1);
     setLocalStorageBasket(basket);
   };
@@ -145,12 +145,7 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
   useEffect(() => {
     updateBasket(params);
     return () => {};
-  }, [Filling]);
-
-  useEffect(() => {
-    updateBasket(params);
-    return () => {};
-  }, [Count]);
+  }, [Filling, Count]);
 
   useEffect(() => {
     getFillingFromLS(params);
@@ -163,9 +158,12 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
       <StyledPhoto img={params.img} />
       <BasketItemParamsWrapper>
         <ParamsWrapper>
-          <Text type="p" color={COLORS.DARK_GREY} fontFamily="OpenSansBold">
-            {params.name}
-          </Text>
+          <TextWrapper>
+            <Text type="p" color={COLORS.DARK_GREY} fontFamily="OpenSansBold">
+              {params.name}
+            </Text>
+            <SelectWrapper>{addSelect()}</SelectWrapper>
+          </TextWrapper>
           <CountPriceWrapper>
             <CountWrapper>
               <div style={{ display: CountEditor.text }}>
@@ -179,11 +177,7 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
                 </Text>
               </div>
               <div style={{ display: CountEditor.editor }}>
-                <ItemCounter
-                  initialCount={params.count}
-                  onClick={getCount}
-                  event={event}
-                />
+                <ItemCounter initialCount={params.count} onClick={getCount} />
               </div>
 
               <StyledChangeButton
@@ -204,7 +198,6 @@ function DesktopBasketItem({ params, event }: IDesktopBasketItemProps) {
             </Text>
           </CountPriceWrapper>
         </ParamsWrapper>
-        {addSelect()}
       </BasketItemParamsWrapper>
     </MainWrapper>
   );

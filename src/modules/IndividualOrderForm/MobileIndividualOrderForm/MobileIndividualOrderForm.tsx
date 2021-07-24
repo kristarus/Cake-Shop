@@ -96,7 +96,7 @@ function MobileIndividualOrderForm() {
           name="name"
           placeholder="Ваше имя"
           width="100%"
-          borderColor="transparent"
+          bordercolor="transparent"
           value={formik.values.name}
           onChange={formik.handleChange}
           error={formik.errors.name}
@@ -105,7 +105,7 @@ function MobileIndividualOrderForm() {
           name="phone"
           placeholder="Ваш телефон"
           width="100%"
-          borderColor="transparent"
+          bordercolor="transparent"
           value={formik.values.phone}
           onChange={formik.handleChange}
           error={formik.errors.phone}
@@ -116,7 +116,7 @@ function MobileIndividualOrderForm() {
           name="description"
           placeholder="Опишите ваш торт"
           width="100%"
-          borderColor="transparent"
+          bordercolor="transparent"
           value={formik.values.description}
           onChange={formik.handleChange}
         />
@@ -132,9 +132,9 @@ function MobileIndividualOrderForm() {
       </UploadInputWrapper>
       {sliceFileName()}
       <Button
-        backgroundColor={COLORS.WHITE}
-        textColor={COLORS.DARK_GREY}
-        borderColor={COLORS.DARK_GREY}
+        backgroundcolor={COLORS.WHITE}
+        textcolor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         text="Отправить"
         onClick={() => {}}
         type="submit"

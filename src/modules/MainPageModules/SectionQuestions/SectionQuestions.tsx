@@ -1,4 +1,3 @@
-import { useState, useCallback, useRef } from "react";
 import { QuestionForm } from "modules";
 import { Root } from "./SectionQuestionsStyles";
 import { Text } from "components";

@@ -5,7 +5,6 @@ import { Text, Button, NavigationLink } from "components";
 import { popularRight, popularReverse } from "assets";
 import { pageRoutes } from "constants/pageRoutes";
 import Slider from "react-slick";
-// import { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -30,9 +29,9 @@ function MobileSectionPopular() {
       </SliderWrapper>
       <NavigationLink href={pageRoutes.POPULAR}>
         <Button
-          backgroundColor={COLORS.DARK_GREY}
-          textColor={COLORS.WHITE}
-          borderColor={COLORS.DARK_GREY}
+          backgroundcolor={COLORS.DARK_GREY}
+          textcolor={COLORS.WHITE}
+          bordercolor={COLORS.DARK_GREY}
           text="Узнать больше"
           onClick={() => {}}
         />

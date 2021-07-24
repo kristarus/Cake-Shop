@@ -10,7 +10,7 @@ export const formikConfig = {
     name: "",
     phone: "",
     date: "",
-    payment: "Оплата наличными",
+    payment: "",
     comment: "",
   },
   onSubmit: () => {},

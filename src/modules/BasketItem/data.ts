@@ -1,6 +1,6 @@
 export const formikConfig = {
   initialValues: {
-    filling: "Стандартная",
+    filling: "",
   },
   onSubmit: () => {},
   validateOnChange: false,

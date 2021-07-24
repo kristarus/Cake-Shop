@@ -6,7 +6,7 @@ export const Root = styled.div`
   background-size: 60% 20%;
   background-repeat: no-repeat;
 
-  @media (max-width: 900px) {
+  @media (max-width: 916px) {
     background-image: url();
   }
 `;

@@ -17,9 +17,9 @@ function DesktopSectionPopular() {
       </ContentWrapper>
       <NavigationLink href={pageRoutes.POPULAR}>
         <Button
-          backgroundColor={COLORS.DARK_GREY}
-          textColor={COLORS.WHITE}
-          borderColor={COLORS.DARK_GREY}
+          backgroundcolor={COLORS.DARK_GREY}
+          textcolor={COLORS.WHITE}
+          bordercolor={COLORS.DARK_GREY}
           text="Узнать больше"
           onClick={() => {}}
         />

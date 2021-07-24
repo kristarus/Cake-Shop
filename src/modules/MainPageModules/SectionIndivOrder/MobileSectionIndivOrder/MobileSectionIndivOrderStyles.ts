@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Root = styled.div`
-  margin: 50px 0;
+  margin: 50px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

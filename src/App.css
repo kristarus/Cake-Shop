@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 @media (min-width: 1700px) {
   h1 {
     font-size: 150px;

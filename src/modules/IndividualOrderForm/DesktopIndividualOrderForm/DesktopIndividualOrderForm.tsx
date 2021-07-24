@@ -20,7 +20,6 @@ function DesktopIndividualOrderForm() {
   const [File, setFile] = useState<any>("");
   const [FileName, setFileName] = useState("");
   const [FormState, setFormState] = useState(true);
-  const formRef = useRef<any>(null);
 
   const checkValid = (errors: any) => {
     if (errors.name || errors.phone) {
@@ -31,24 +30,12 @@ function DesktopIndividualOrderForm() {
   };
 
   const handleSubmitForm = (data: any, formikHelpers: any) => {
-    // const copiedData = {
-    //   name: data.name.trim(),
-    //   phone: data.phone.trim(),
-    //   description: data.description,
-    //   file: File,
-    // };
-    // console.log(copiedData);
     const idForm: any = document.getElementById("my-form");
-    console.log(idForm);
     const form = new FormData(idForm);
-    // form.append("name", data.name.trim());
-    // form.append("phone", data.phone.trim());
-    // form.append("description", data.description);
-    // form.append("file", File);
-    for (let key in form.entries()) {
-      console.log("key", key);
-    }
-    console.log(form.values());
+    form.append("name", data.name.trim());
+    form.append("phone", data.phone.trim());
+    form.append("description", data.description);
+    form.append("file", File);
 
     if (FormState) dispatch(requestsActionTypes.sendFileThunk(form));
     formikHelpers.resetForm();
@@ -101,7 +88,6 @@ function DesktopIndividualOrderForm() {
     setFile("");
   };
 
-  console.log(FormState);
   return (
     <IndOrderFormWrapper onSubmit={formik.handleSubmit} id="my-form">
       <TextWrapper>
@@ -117,14 +103,14 @@ function DesktopIndividualOrderForm() {
           onChange={formik.handleChange}
           error={formik.errors.name}
           width="45%"
-          borderColor="transparent"
+          bordercolor="transparent"
         />
         <Input
           name="phone"
           placeholder="Ваш телефон"
           value={formik.values.phone}
           width="45%"
-          borderColor="transparent"
+          bordercolor="transparent"
           onChange={formik.handleChange}
           error={formik.errors.phone}
         />
@@ -136,7 +122,7 @@ function DesktopIndividualOrderForm() {
         placeholder="Опишите ваш торт"
         value={formik.values.description}
         width="80%"
-        borderColor="transparent"
+        bordercolor="transparent"
         onChange={formik.handleChange}
       />
       <UploadInputWrapper>
@@ -150,9 +136,9 @@ function DesktopIndividualOrderForm() {
       </UploadInputWrapper>
       {sliceFileName(FileName)}
       <Button
-        backgroundColor={COLORS.WHITE}
-        textColor={COLORS.DARK_GREY}
-        borderColor={COLORS.DARK_GREY}
+        backgroundcolor={COLORS.WHITE}
+        textcolor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         text="Отправить"
         onClick={() => {}}
         type="submit"

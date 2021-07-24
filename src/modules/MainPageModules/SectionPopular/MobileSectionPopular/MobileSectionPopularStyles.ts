@@ -4,8 +4,8 @@ export const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
-  width: 100%;
+  margin: 50px auto;
+  width: 90%;
 `;
 
 export const SliderWrapper = styled.div`

@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
-import { IconRadio, Text } from "components";
-import {
-  SelectedPieceOfCake,
-  UnselectedPieceOfCake,
-  WrapperIconSelected,
-  WrapperIconUnselected,
-  StyledRadioGroup,
-} from "./MobileIconRadioGroupStyles";
+import { IconRadio } from "components";
+import { StyledRadioGroup } from "./MobileIconRadioGroupStyles";
 import { COLORS } from "constants/colors";
 import { IMobileIconRadioGroup } from "./types";
 

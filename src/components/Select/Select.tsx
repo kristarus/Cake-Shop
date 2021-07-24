@@ -1,6 +1,5 @@
-import { useState, ChangeEvent } from "react";
 import { StyledSelect, StyledOption } from "./SelectStyles";
-import { ISelectProps, ISelectState } from "./types";
+import { ISelectProps } from "./types";
 
 function Select({
   params,
@@ -13,7 +12,11 @@ function Select({
   const createOptions = () => {
     return params.map(function (item: string, index: number) {
       return (
-        <StyledOption value={item} key={item + index}>
+        <StyledOption
+          value={item}
+          key={item + index}
+          style={{ fontSize: "16px !important" }}
+        >
           {item}
         </StyledOption>
       );
@@ -24,7 +27,7 @@ function Select({
     <StyledSelect
       value={value}
       onChange={onChange}
-      label
+      label=""
       width="100%"
       disabled={disabled}
       error={!!error}
