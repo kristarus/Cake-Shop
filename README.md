@@ -1,3 +1,16 @@
+# Cake shop project
+## Description
+
+This project is an online confectionery shop. The application has a clear design, easy navigation and block placement. The online store is written in Typescript. The third-party library Styled Components was used for styling, as well as Material UI. The Formik and Yup libraries were used to process the form data. Sending data to the local server is done using the Axios library and Redux Thunk. Library React-router-dom was used for creating navigation links.
+
+## Implemented functionality
+
++ A catalog of goods of various types, which can be found and selected in the navigation menu. There is a filter in the catalog that allows you to filter products by price and different categories. When you click on a product in the catalog, a modal window opens with a detailed description and the ability to add the product to the cart;
++ A shopping cart and a submission form are implemented on the checkout page. There you can also see all the necessary information about the order. When you click on the "Confirm order" button, data is collected from the form and sent to the local server, the cart is cleared;
++ Responsive design: there is both a desktop and a mobile version of the application;
++ The application has several forms, where the entered data is first validated and then sent to the server;
++ A MongoDB database was used to store the form data submitted by the user.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
