@@ -153,9 +153,9 @@ function MobileSectionBoxes() {
         <ItemsWrapper>{addDegustationItems()}</ItemsWrapper>
         <ButtonWrapper>
           <Button
-            backgroundColor={COLORS.DARK_GREY}
-            textColor={COLORS.WHITE}
-            borderColor={COLORS.DARK_GREY}
+            backgroundcolor={COLORS.DARK_GREY}
+            textcolor={COLORS.WHITE}
+            bordercolor={COLORS.DARK_GREY}
             text="В корзину"
             onClick={() => {
               addToBasket(basketObject);

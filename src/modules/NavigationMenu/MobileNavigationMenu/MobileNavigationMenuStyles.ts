@@ -12,7 +12,7 @@ export const MenuWrapper = styled.div`
   right: 0;
   left: 0;
   background-color: ${COLORS.WHITE};
-  z-index: 1000;
+  z-index: 1;
 `;
 
 export const StyledMenuIcon = styled(MenuIcon)`

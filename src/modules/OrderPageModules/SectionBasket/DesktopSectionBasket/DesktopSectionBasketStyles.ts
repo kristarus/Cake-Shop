@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { noPhoto } from "assets";
 
 interface IBasketItemsWrapperProps {
   size: number;

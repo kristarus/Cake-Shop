@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { isAuthenticatedSelector } from "modules/Requests/redux/selectors";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { requestsActionTypes } from "modules/Requests/redux/requestsSlice";
 import { COLORS } from "constants/colors";
 import {
@@ -95,7 +94,6 @@ function MobileBasketForm({
 
   const getPrice = (price: number = 0) => {
     const basket = getLocalStorageBasket();
-    // let price: number = 0;
     if (basket.lenght === 0) {
       setPrice(0);
       return Price;
@@ -115,13 +113,6 @@ function MobileBasketForm({
     return () => {};
   }, [eventState]);
 
-  // useEffect(() => {
-  //   console.log("FormStateUseEffect", FormState);
-  //   if (FormState) onClick();
-
-  //   return () => {};
-  // }, [FormState]);
-
   useEffect(() => {
     getPrice();
     return () => {};
@@ -140,7 +131,7 @@ function MobileBasketForm({
               name="name"
               placeholder="Ваше имя"
               width="100%"
-              borderColor={COLORS.DARK_GREY}
+              bordercolor={COLORS.DARK_GREY}
               value={formik.values.name}
               onChange={formik.handleChange}
               error={formik.errors.name}
@@ -149,7 +140,7 @@ function MobileBasketForm({
               name="phone"
               placeholder="Номер телефона"
               width="100%"
-              borderColor={COLORS.DARK_GREY}
+              bordercolor={COLORS.DARK_GREY}
               value={formik.values.phone}
               onChange={formik.handleChange}
               error={formik.errors.phone}
@@ -159,7 +150,7 @@ function MobileBasketForm({
               type="date"
               placeholder="Дата доставки"
               width="100%"
-              borderColor={COLORS.DARK_GREY}
+              bordercolor={COLORS.DARK_GREY}
               value={formik.values.date}
               onChange={formik.handleChange}
             />
@@ -189,7 +180,7 @@ function MobileBasketForm({
             name="comment"
             placeholder="Комментарий к заказу"
             width="100%"
-            borderColor={COLORS.DARK_GREY}
+            bordercolor={COLORS.DARK_GREY}
             value={formik.values.comment}
             onChange={formik.handleChange}
           />
@@ -224,9 +215,9 @@ function MobileBasketForm({
           </ContentWrapper>
           <ContentWrapper align="center" margin="0">
             <Button
-              backgroundColor={COLORS.DARK_GREY}
-              textColor={COLORS.WHITE}
-              borderColor={COLORS.DARK_GREY}
+              backgroundcolor={COLORS.DARK_GREY}
+              textcolor={COLORS.WHITE}
+              bordercolor={COLORS.DARK_GREY}
               text="Подтвердить заказ"
               onClick={() => {}}
               type="submit"

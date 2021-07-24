@@ -6,6 +6,16 @@ interface IBasketItemProps {
   img: string;
 }
 
+export const TextWrapper = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  margin: 0 10px;
+  width: 50%;
+  @media (min-width: 1100px) {
+    width: 60%;
+  }
+`;
+
 export const MainWrapper = styled.form`
   box-sizing: border-box;
   position: relative !important;
@@ -32,11 +42,14 @@ export const ParamsWrapper = styled.div`
   margin-bottom: 15px;
 `;
 
+export const SelectWrapper = styled.div``;
+
 export const CountPriceWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 50%;
+  min-width: 200px;
 
   @media (min-width: 1100px) {
     width: 40%;

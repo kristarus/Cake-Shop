@@ -2,27 +2,27 @@ import styled from "styled-components";
 import { Button } from "@material-ui/core";
 
 interface IStyledButtonProps {
-  backgroundColor: string;
-  borderColor: string;
-  textColor: string;
+  backgroundcolor: string;
+  bordercolor: string;
+  textcolor: string;
 }
 
 export const StyledButton = styled(Button)<IStyledButtonProps>`
   padding: 10px 20px !important;
   width: fit-content !important;
-  border: 2px solid ${({ borderColor }: IStyledButtonProps) => borderColor} !important;
+  border: 2px solid ${({ bordercolor }: IStyledButtonProps) => bordercolor} !important;
   border-radius: 10px !important;
-  background-color: ${({ backgroundColor }: IStyledButtonProps) =>
-    backgroundColor} !important;
+  background-color: ${({ backgroundcolor }: IStyledButtonProps) =>
+    backgroundcolor} !important;
   font-family: OpenSansLight !important;
-  color: ${({ textColor }: IStyledButtonProps) => textColor} !important;
+  color: ${({ textcolor }: IStyledButtonProps) => textcolor} !important;
   cursor: pointer;
   transition-duration: 0.3s !important;
   &:hover {
-    background-color: ${({ textColor }: IStyledButtonProps) =>
-      textColor} !important;
-    color: ${({ backgroundColor }: IStyledButtonProps) =>
-      backgroundColor} !important;
+    background-color: ${({ textcolor }: IStyledButtonProps) =>
+      textcolor} !important;
+    color: ${({ backgroundcolor }: IStyledButtonProps) =>
+      backgroundcolor} !important;
   }
   @media (min-width: 1700px) {
     font-size: 20px !important;

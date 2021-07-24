@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavigationMenu, SectionBasket, Contacts } from "modules";
 
 function OrderPage() {

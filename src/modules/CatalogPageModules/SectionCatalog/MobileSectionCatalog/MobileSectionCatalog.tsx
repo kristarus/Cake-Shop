@@ -34,7 +34,6 @@ function MobileSectionMain({ header, page }: IMobileSectionCatalogProps) {
     JSONfilter = localStorage.getItem("filter");
     if (JSONfilter === null) {
       const filter: object = FilterLocalStorage;
-      console.log("Create filter", filter);
       setLocalStorageFilter(filter);
     }
   };
@@ -51,10 +50,8 @@ function MobileSectionMain({ header, page }: IMobileSectionCatalogProps) {
     let type: string = page;
     if (catalogData[index]["type"] != type) return false;
     let filter = getLocalStorageFilter();
-    console.log("getLocalStorageFilter", filter);
     if (filter === null) createLocalStorageFilter();
     filter = getLocalStorageFilter();
-    console.log(filter);
     if (
       parseInt(catalogData[index]["price"]) < filter["price"][page]["min"] &&
       filter["price"][page]["min"] != ""
@@ -120,9 +117,9 @@ function MobileSectionMain({ header, page }: IMobileSectionCatalogProps) {
       />
       <HeaderWrapper>
         <Button
-          backgroundColor={COLORS.LIGHT_GREY}
-          textColor={COLORS.GREY}
-          borderColor={COLORS.GREY}
+          backgroundcolor={COLORS.LIGHT_GREY}
+          textcolor={COLORS.GREY}
+          bordercolor={COLORS.GREY}
           text="Фильтр"
           onClick={changeModal}
         />

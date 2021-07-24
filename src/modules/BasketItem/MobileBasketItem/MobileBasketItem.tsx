@@ -66,7 +66,6 @@ function MobileBasketItem({ params, event }: IMobileBasketItemProps) {
   });
 
   const addSelect = () => {
-    if (params.isDegustationBox) return <></>;
     return params.isPie ? (
       <>
         <Text
@@ -84,22 +83,7 @@ function MobileBasketItem({ params, event }: IMobileBasketItemProps) {
         />
       </>
     ) : (
-      <>
-        <Text
-          type="description"
-          color={COLORS.DARK_GREY}
-          fontFamily="OpenSansBold"
-        >
-          Выберите начинку
-        </Text>
-        <Select
-          params={["Cтандартная"]}
-          disabled
-          value={formik.values.filling}
-          onChange={formik.handleChange}
-          name="filling"
-        />
-      </>
+      <></>
     );
   };
 
@@ -112,7 +96,6 @@ function MobileBasketItem({ params, event }: IMobileBasketItemProps) {
         deletedIndex = index;
       }
     });
-    console.log(deletedIndex);
     basket.splice(deletedIndex, 1);
     setLocalStorageBasket(basket);
   };
@@ -133,18 +116,15 @@ function MobileBasketItem({ params, event }: IMobileBasketItemProps) {
   };
 
   const openCountEditor = () => {
-    console.log("openCountEditor!");
     setCountEditor({
       btnEdit: "none",
       btnAccept: "block",
       text: "none",
       editor: "block",
     });
-    console.log("CountEditor!", CountEditor);
   };
 
   const closeCountEditor = () => {
-    console.log("closeCountEditor!");
     setCountEditor({
       btnEdit: "block",
       btnAccept: "none",
@@ -166,7 +146,6 @@ function MobileBasketItem({ params, event }: IMobileBasketItemProps) {
 
   useEffect(() => {
     getFillingFromLS(params);
-    console.log(Filling);
     return () => {};
   }, []);
 
@@ -198,11 +177,7 @@ function MobileBasketItem({ params, event }: IMobileBasketItemProps) {
             </Text>
           </div>
           <div style={{ display: CountEditor.editor }}>
-            <ItemCounter
-              initialCount={params.count}
-              onClick={getCount}
-              event={event}
-            />
+            <ItemCounter initialCount={params.count} onClick={getCount} />
           </div>
 
           <StyledChangeButton

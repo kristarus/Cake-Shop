@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavigationMenu, SectionCatalog, Contacts } from "modules";
 import { Root, GreyBGWrapper } from "./CatalogPopularPageStyles";
 

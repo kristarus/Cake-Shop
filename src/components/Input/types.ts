@@ -6,7 +6,7 @@ export interface IInputProps {
   name: string;
   value: string;
   placeholder?: string;
-  borderColor: string;
+  bordercolor: string;
   width: string;
   multiline?: boolean;
   rows?: number;

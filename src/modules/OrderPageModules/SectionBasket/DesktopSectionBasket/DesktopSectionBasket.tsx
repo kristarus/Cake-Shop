@@ -77,18 +77,12 @@ function DesktopSectionBasket() {
   const confirmEvent = () => {
     setIsConfirmed(!isConfirmed);
     clearLocalStorageBasket();
-    console.log("isConfirmed", isConfirmed);
   };
 
   useEffect(() => {
     checkScroll();
     return () => {};
   }, [basketSize]);
-
-  // useEffect(() => {
-  //   clearLocalStorageBasket();
-  //   return () => {};
-  // }, [isConfirmed]);
 
   return (
     <Root>

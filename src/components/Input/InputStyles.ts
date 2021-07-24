@@ -4,7 +4,7 @@ import { COLORS } from "constants/colors";
 
 interface IInputProps {
   width: string;
-  borderColor: string;
+  bordercolor: string;
 }
 
 export const StyledInput = styled(TextField)<IInputProps>`
@@ -28,7 +28,7 @@ export const StyledInput = styled(TextField)<IInputProps>`
   }
   .MuiOutlinedInput-input {
     padding: 13px;
-    border: 2px solid ${({ borderColor }) => borderColor};
+    border: 2px solid ${({ bordercolor }) => bordercolor};
     border-radius: 10px;
     outline: none;
     &:hover {

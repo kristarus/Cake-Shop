@@ -1,4 +1,3 @@
-import React from "react";
 import {
   StyledH1,
   StyledH2,

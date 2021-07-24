@@ -38,4 +38,6 @@ export const ContentWrapper = styled.div<IContentWrapperProps>`
 export const PriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
 `;

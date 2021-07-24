@@ -46,14 +46,16 @@ export const StyledLeaf = styled(Leaf)`
 `;
 
 export const StyledPhoto = styled.div<IPopularItemProps>`
-  width: 350px;
-  height: 350px;
+  width: 95%;
+  max-width: 350px;
+  padding-top: 95%;
   background-image: url(${({ img }: IPopularItemProps) => img});
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: center;
 
   @media (min-width: 1700px) {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
   }
 `;

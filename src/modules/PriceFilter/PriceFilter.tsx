@@ -2,7 +2,7 @@ import { COLORS } from "constants/colors";
 import { Text, Input } from "components";
 import { MainWrapper, InputsWrapper } from "./PriceFilterStyles";
 import { IPriceFilterProps } from "./types";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import { formikConfig } from "./data";
 import { FilterLocalStorage } from "constants/data";
@@ -25,7 +25,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
   const checkMinPrice = () => {
     if (
       (+formik.values.min < +min || +formik.values.min > +formik.values.max) &&
-      formik.values.min != ""
+      formik.values.min !== ""
     ) {
       formik.setFieldValue("min", min);
       updateLocalStorageMinPrice(min);
@@ -35,7 +35,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
   const checkMaxPrice = () => {
     if (
       (+formik.values.max > +max || +formik.values.min > +formik.values.max) &&
-      formik.values.max != ""
+      formik.values.max !== ""
     ) {
       formik.setFieldValue("max", max);
       updateLocalStorageMaxPrice(max);
@@ -78,6 +78,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
   };
 
   const filter = getLocalStorageFilter();
+
   useEffect(() => {
     formik.setFieldValue("min", filter.price[page].min || min);
     formik.setFieldValue("max", filter.price[page].max || max);
@@ -94,7 +95,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
           name="min"
           placeholder={min}
           width="80px"
-          borderColor={COLORS.DARK_GREY}
+          bordercolor={COLORS.DARK_GREY}
           value={formik.values.min}
           onChange={formik.handleChange}
           onBlur={checkMinPrice}
@@ -106,7 +107,7 @@ function PriceFilter({ min, max, page }: IPriceFilterProps) {
           name="max"
           placeholder={max}
           width="80px"
-          borderColor={COLORS.DARK_GREY}
+          bordercolor={COLORS.DARK_GREY}
           value={formik.values.max}
           onChange={formik.handleChange}
           onBlur={checkMaxPrice}

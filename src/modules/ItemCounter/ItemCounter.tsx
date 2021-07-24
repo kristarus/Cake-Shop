@@ -6,12 +6,9 @@ import { IItemCounterProps } from "./types";
 
 function ItemCounter({
   initialCount = 1,
-  event = () => {},
   onClick = () => {},
 }: IItemCounterProps) {
   const [Count, setCount] = useState(initialCount);
-
-  // console.log(Count);
 
   const handleIncrement = () => {
     setCount(Count + 1);

@@ -1,6 +1,6 @@
 import { COLORS } from "constants/colors";
 import styled from "styled-components";
-import { Select } from "@material-ui/core";
+import { Select, MenuItem } from "@material-ui/core";
 
 interface IStyledSelectProps {
   width: string;
@@ -8,6 +8,7 @@ interface IStyledSelectProps {
 }
 
 export const StyledSelect = styled(Select)<IStyledSelectProps>`
+  position: relative !important;
   font-family: OpenSansLight !important;
   width: ${({ width }: IStyledSelectProps) => width};
   min-width: 100px;
@@ -49,7 +50,7 @@ export const StyledSelect = styled(Select)<IStyledSelectProps>`
   }
 `;
 
-export const StyledOption = styled.option`
+export const StyledOption = styled(MenuItem)`
   font-family: OpenSansLight !important;
   cursor: pointer;
 

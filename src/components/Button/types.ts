@@ -2,10 +2,10 @@ import React from "react";
 
 export interface IButtonProps {
   className?: string;
-  textColor: string;
+  textcolor: string;
   text: React.ReactNode;
-  backgroundColor: string;
-  borderColor: string;
+  backgroundcolor: string;
+  bordercolor: string;
   onClick: () => void;
   onSubmit?: React.FormEventHandler<HTMLButtonElement>;
   type?: "button" | "submit" | "reset";

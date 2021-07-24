@@ -2,9 +2,9 @@ import { StyledButton } from "./ButtonStyles";
 import { IButtonProps } from "./types";
 
 function Button({
-  textColor = "white",
-  backgroundColor = "black",
-  borderColor = "black",
+  textcolor = "white",
+  backgroundcolor = "black",
+  bordercolor = "black",
   text,
   onClick,
   onSubmit,
@@ -12,9 +12,9 @@ function Button({
 }: IButtonProps) {
   return (
     <StyledButton
-      backgroundColor={backgroundColor}
-      textColor={textColor}
-      borderColor={borderColor}
+      backgroundcolor={backgroundcolor}
+      textcolor={textcolor}
+      bordercolor={bordercolor}
       onClick={onClick}
       onSubmit={onSubmit}
       type={type}

@@ -7,6 +7,10 @@ export const Root = styled.div`
   align-items: center;
   margin: 50px auto;
 
+  @media (min-width: 701px) and (max-width: 916px) {
+    width: 70%;
+  }
+
   @media (max-width: 700px) {
     width: 80%;
   }

@@ -40,7 +40,6 @@ function DesktopQuestionForm() {
   const isValid = () => {
     checkValid(formik.errors);
   };
-  console.log(FormState);
 
   return (
     <QuestionFormWrapper onSubmit={formik.handleSubmit}>
@@ -49,7 +48,7 @@ function DesktopQuestionForm() {
         placeholder="Ваше имя"
         value={formik.values.name}
         width="100%"
-        borderColor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         onChange={formik.handleChange}
         error={formik.errors.name}
       />
@@ -58,14 +57,14 @@ function DesktopQuestionForm() {
         placeholder="Номер телефона"
         value={formik.values.phone}
         width="100%"
-        borderColor={COLORS.DARK_GREY}
+        bordercolor={COLORS.DARK_GREY}
         onChange={formik.handleChange}
         error={formik.errors.phone}
       />
       <Button
-        backgroundColor={COLORS.DARK_GREY}
-        textColor={COLORS.WHITE}
-        borderColor={COLORS.DARK_GREY}
+        backgroundcolor={COLORS.DARK_GREY}
+        textcolor={COLORS.WHITE}
+        bordercolor={COLORS.DARK_GREY}
         text="Отправить"
         onClick={() => {}}
         type="submit"

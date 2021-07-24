@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import { COLORS } from "constants/colors";
 import { Text, Button } from "components";
 import { ItemCounter } from "modules";
@@ -22,7 +21,6 @@ function ModalCatalogItem({
   onClick,
 }: IModalCatalogItemProps) {
   const [Count, setCount] = useState(1);
-  const dispatch = useDispatch();
 
   const getCount = (data: number) => {
     setCount(data);
@@ -119,9 +117,9 @@ function ModalCatalogItem({
           <ItemCounter onClick={getCount} />
         </CounterWrapper>
         <Button
-          backgroundColor={COLORS.DARK_GREY}
-          textColor={COLORS.WHITE}
-          borderColor={COLORS.DARK_GREY}
+          backgroundcolor={COLORS.DARK_GREY}
+          textcolor={COLORS.WHITE}
+          bordercolor={COLORS.DARK_GREY}
           text="В корзину"
           onClick={sendToLocalStorage}
         />

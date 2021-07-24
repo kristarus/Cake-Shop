@@ -23,7 +23,7 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledText = styled.div`
-  z-index: 10;
+  z-index: 0;
   position: absolute;
   width: fit-content;
   left: 0;
